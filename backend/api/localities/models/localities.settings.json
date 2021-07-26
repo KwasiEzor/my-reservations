@@ -1,0 +1,29 @@
+{
+  "kind": "collectionType",
+  "collectionName": "localities",
+  "info": {
+    "name": "Localities"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "postalCode": {
+      "type": "string",
+      "required": true,
+      "maxLength": 6
+    },
+    "locality": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    },
+    "location": {
+      "via": "locality",
+      "model": "locations"
+    }
+  }
+}

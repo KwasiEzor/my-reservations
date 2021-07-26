@@ -1,0 +1,26 @@
+{
+  "kind": "collectionType",
+  "collectionName": "artists",
+  "info": {
+    "name": "Artists",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "firstname": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    },
+    "lastname": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    }
+  }
+}

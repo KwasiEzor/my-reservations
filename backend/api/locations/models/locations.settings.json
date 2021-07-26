@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "locations",
+  "info": {
+    "name": "Locations"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string"
+    },
+    "designation": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    },
+    "address": {
+      "type": "string",
+      "required": true
+    },
+    "phone": {
+      "type": "string",
+      "maxLength": 30
+    },
+    "website": {
+      "type": "string"
+    },
+    "locality": {
+      "model": "localities",
+      "via": "location"
+    },
+    "representation": {
+      "via": "location",
+      "model": "representations"
+    }
+  }
+}

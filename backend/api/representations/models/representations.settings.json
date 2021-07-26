@@ -1,0 +1,27 @@
+{
+  "kind": "collectionType",
+  "collectionName": "representations",
+  "info": {
+    "name": "Representations",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "when": {
+      "type": "string"
+    },
+    "show": {
+      "via": "representation",
+      "model": "shows"
+    },
+    "location": {
+      "model": "locations",
+      "via": "representation"
+    }
+  }
+}

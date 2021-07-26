@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "shows",
+  "info": {
+    "name": "Shows",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "slug": {
+      "type": "string",
+      "required": true,
+      "maxLength": 60
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "posterUrl": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "bookable": {
+      "type": "boolean"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "representation": {
+      "via": "show",
+      "model": "representations"
+    },
+    "location": {
+      "model": "locations"
+    }
+  }
+}
