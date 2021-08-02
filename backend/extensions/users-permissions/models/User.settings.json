@@ -73,6 +73,10 @@
     "langue": {
       "type": "string",
       "maxLength": 3
+    },
+    "representations": {
+      "via": "users",
+      "collection": "representations"
     }
   }
 }

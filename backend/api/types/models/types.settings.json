@@ -2,7 +2,8 @@
   "kind": "collectionType",
   "collectionName": "types",
   "info": {
-    "name": "Types"
+    "name": "Types",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,6 +16,15 @@
       "type": "string",
       "required": true,
       "maxLength": 60
+    },
+    "artists": {
+      "via": "types",
+      "collection": "artists"
+    },
+    "shows": {
+      "collection": "shows",
+      "via": "types",
+      "dominant": true
     }
   }
 }

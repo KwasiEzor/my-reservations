@@ -21,6 +21,16 @@
       "type": "string",
       "required": true,
       "maxLength": 60
+    },
+    "types": {
+      "via": "artists",
+      "collection": "types",
+      "dominant": true
+    },
+    "shows": {
+      "collection": "shows",
+      "via": "artists",
+      "dominant": true
     }
   }
 }

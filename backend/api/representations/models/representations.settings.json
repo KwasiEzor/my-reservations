@@ -12,9 +12,6 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "when": {
-      "type": "string"
-    },
     "show": {
       "via": "representation",
       "model": "shows"
@@ -22,6 +19,19 @@
     "location": {
       "model": "locations",
       "via": "representation"
+    },
+    "users": {
+      "plugin": "users-permissions",
+      "collection": "user",
+      "via": "representations",
+      "dominant": true
+    },
+    "place": {
+      "type": "integer"
+    },
+    "when": {
+      "type": "datetime",
+      "required": true
     }
   }
 }
